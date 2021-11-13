@@ -2,7 +2,7 @@ let db;
 let expenseVersion;
 
 // db request
-const request = indexedDB.open('expenseDB', expenseVersion || 21);
+const request = window.indexedDB.open('expenseDB', expenseVersion || 21);
 
 request.onupgradeneeded = function (e) {
     const { oldVersion } = e;
@@ -21,10 +21,10 @@ request.onerror = function (e) {
 
 function checkDatabase() {
     // open transaction on expenseStore db
-    let transaction = db.transaction(['expenseStore'], 'readwrite');
+    const transaction = db.transaction(['pending'], 'readwrite');
 
     // access store object
-    const store = transaction.objectStore('expenseStore');
+    const store = transaction.objectStore('pending');
 
     const getAll = store.getAll();
 

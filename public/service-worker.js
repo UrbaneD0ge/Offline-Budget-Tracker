@@ -1,10 +1,13 @@
 const FILES_TO_CACHE = [
-    '/',
-    '/index.html',
-    '/styles.css',
-    '/icons/icon-192x192.png',
-    '/icons/icon-512x512.png',
-]
+  '/',
+  '/db.js',
+  'manifest.json',
+  '/index.html',
+  '/styles.css',
+  '/icons/icon-192x192.png',
+  '/icons/icon-512x512.png',
+  'https://cdn.jsdelivr.net/npm/chart.js@2.8.0',
+];
 
 const CACHE_NAME = 'static-cache-v2';
 const DATA_CACHE_NAME = 'data-cache-v1';
